@@ -1,0 +1,43 @@
+$base: 4px;
+
+.menu-lang {
+    &--mode_login {
+        position: absolute;
+        top: $base * 5;
+        right: $base * 5;
+        display: flex;
+
+        [class*='-btn']:not(:last-child) {
+            margin-right: $base;
+        }
+    }
+
+    &--mode_main {
+        margin-bottom: $base * 3;
+
+        [class*='-btn']:not(:last-child) {
+            margin-bottom: $base;
+        }
+    }
+
+    &-btn {
+        display: block;
+        width: 100%;
+        padding: $base * 2;
+        margin: 0;
+        color: #ccc;
+        text-align: center;
+        cursor: pointer;
+        background: none;
+        border: none;
+        border-radius: 1px;
+        outline: 0;
+        transition: .2s;
+
+        &:hover,
+        &--active {
+            color: #fff;
+            background-color: #ccc;
+        }
+    }
+}

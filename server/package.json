@@ -1,0 +1,17 @@
+{
+    "name": "dev-mock-server",
+    "productName": "Development - Mock server",
+    "version": "0.0.1",
+    "description": "Development - Mock server",
+    "scripts": {
+        "start": "npm prune && npm install && node index.js"
+    },
+    "dependencies": {
+        "express": "4.16.3",
+        "moment": "2.22.2"
+    },
+    "devDependencies": {
+        "body-parser": "1.18.2",
+        "internet-available": "1.0.0"
+    }
+}

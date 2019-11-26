@@ -1,0 +1,25 @@
+$base: 4px;
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    width: $base * 101;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: $base * 3;
+    box-shadow: 0 ($base / 2) ($base * 2) 0 rgba(52, 56, 54, .12);
+
+    .login-field {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+        }
+
+        input {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+    }
+}

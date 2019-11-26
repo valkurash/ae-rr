@@ -1,0 +1,213 @@
+{
+    "Action": {
+        "SEARCH": "Поиск",
+        "NEW_SEARCH": "Новый поиск",
+        "CREATE": "Создать",
+        "EDIT": "Редактировать",
+        "SUBMIT": "Отправить",
+        "CONFIRM": "Подтвердить",
+        "DISCARD": "Сбросить",
+        "DOWNLOAD": "Скачать",
+        "CANCEL": "Отменить",
+        "REVOKE": "Аннулировать",
+        "REJECT": "Отказать",
+        "ADD": "Добавить",
+        "BACK": "Назад",
+        "UPDATE": "Обновить",
+        "NEXT": "Далее",
+        "APPLY": "Применить",
+        "ATTACH": "Прикрепить файл"
+    },
+    "Computed": {
+        "percent": "{{value}}%",
+        "date": "{{date, fromIso}}",
+        "period": "{{period}} мес.",
+        "day": "{{day}} дн.",
+        "amount": "{{amount.value}} {{amount.currencyCode}}",
+        "orderNumber": "№ {{value}}"
+    },
+    "Period": {
+        "day": "дн."
+    },
+    "Option": {
+        "yes": "Да",
+        "no": "Нет"
+    },
+    "Loading": {
+        "title": "Идет загрузка...",
+        "files": "Загружается..."
+    },
+    "Retry": {
+        "title": "Попробуйте еще раз"
+    },
+    "Navigation": {
+    },
+    "Person": {
+        "fullName": {
+            "label": "ФИО",
+            "placeholder": "Введите ФИО"
+        },
+        "firstName": {
+            "label": "Имя",
+            "placeholder": "Введите имя"
+        },
+        "lastName": {
+            "label": "Фамилия",
+            "placeholder": "Введите фамилию"
+        },
+        "patronymic": {
+            "label": "Отчество",
+            "placeholder": "Введите отчество"
+        },
+        "gender": {
+            "label": "Пол"
+        },
+        "birthDate": {
+            "label": "Дата рождения"
+        },
+        "birthCountry": {
+            "label": "Страна рождения",
+            "placeholder": "Выберите страну рождения"
+        },
+        "birthCity": {
+            "label": "Город рождения",
+            "placeholder": "Выберите город рождения"
+        },
+        "citizenship": {
+            "label": "Гражданство",
+            "placeholder": "Выберите гражданство"
+        },
+        "maritalStatus": {
+            "label": "Семейное положение",
+            "placeholder": "Выберите семейное положение"
+        },
+        "signature": {
+            "label": "Подпись"
+        },
+        "resident": {
+            "label": "Резидент",
+            "value-plural": "Нет",
+            "value": "Да"
+        }
+    },
+    "Address": {
+        "country": {
+            "label": "Страна",
+            "placeholder": "Выберите страну"
+        },
+        "region": {
+            "label": "Регион",
+            "placeholder": "Выберите регион"
+        },
+        "city": {
+            "label": "Город",
+            "placeholder": "Выберите город"
+        },
+        "street": {
+            "label": "Улица",
+            "placeholder": "Введите улицу"
+        },
+        "house": {
+            "label": "Дом",
+            "placeholder": "Введите дом"
+        },
+        "block": {
+            "label": "Корпус",
+            "placeholder": "Введите корпус"
+        },
+        "building": {
+            "label": "Строение",
+            "placeholder": "Введите строение"
+        },
+        "postCode": {
+            "label": "Индекс",
+            "placeholder": "Введите индекс"
+        }
+    },
+    "Gender": {
+        "MALE": "Мужской",
+        "FEMALE": "Женский"
+    },
+    "MaritalStatus": {
+        "SINGLE": "Не замужем / не женат",
+        "MARRIED": "Замужем / женат"
+    },
+    "Contact": {
+        "home": {
+            "label": "Домашний телефон",
+            "placeholder": "Введите домашний телефон"
+        },
+        "mobile": {
+            "label": "Мобильный телефон",
+            "placeholder": "Введите мобильный телефон"
+        },
+        "other": {
+            "label": "Другой телефон"
+        },
+        "email": {
+            "label": "E-mail",
+            "placeholder": "Введите e-mail"
+        }
+    },
+    "Document": {
+        "type": {
+            "label": "Тип документа",
+            "placeholder": "Выберите тип документа"
+        },
+        "prefix": {
+            "label": "Серия",
+            "placeholder": "1234"
+        },
+        "serialNumber": {
+            "label": "Номер документа",
+            "prefixLabel": "Серия и номер документа",
+            "placeholder": "012345678"
+        },
+        "expirationDate": {
+            "label": "Действителен до"
+        },
+        "issuingOrganization": {
+            "label": "Документ выдан",
+            "placeholder": "Введите организацию выдавшую документ"
+        },
+        "issuingDate": {
+            "label": "Дата выдачи"
+        },
+        "issuingCountry": {
+            "label": "Страна выдавшая документ",
+            "placeholder": "Введите страну выдавшую документ"
+        }
+    },
+    "Validation": {
+        "min": "Должно быть больше {{count}} символов",
+        "max": "Должно быть меньше {{count}} символов",
+        "minNumber": "Должно быть больше {{number}}",
+        "maxNumber": "Должно быть меньше {{number}}",
+        "length": "Должно быть {{count}} символов",
+        "sumMax": "Суммарная длина полей {{fields}} должна быть меньше {{count}} символов",
+        "inList": "Выберите значение из списка",
+        "required": "Поле обязательно",
+        "date": "Некорректная дата",
+        "prefix": "Должно быть от 2 до 3 латинских символов в верхнем регистре",
+        "serialNumber": "Должно быть от 6 до 9 цифр",
+        "phone": "Должен быть корректный Азербайджанский номер с кодом",
+        "select": "Выберите значение из списка"
+    },
+    "Error": {
+        "unknown": "Неизвестная ошибка",
+        "retry": "Произошла ошибка. Попробуйте снова.",
+        "noData": "Нет данных",
+        "mandatory": {
+            "fill": "Обязательное поле",
+            "check": "Должно быть выбрано"
+        },
+        "form": {
+            "title": "Пожалуйста, исправьте некорректные поля"
+        },
+        "noSearchResults": "По запросу \"{{value}}\" ничего не найдено"
+    },
+    "Role": {
+        "ROLE_USER": "Пользователь",
+        "ROLE_ADMIN": "Администратор"
+    }
+}

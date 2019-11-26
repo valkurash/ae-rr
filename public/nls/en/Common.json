@@ -1,0 +1,213 @@
+{
+    "Action": {
+        "SEARCH": "Search",
+        "NEW_SEARCH": "New Search",
+        "CREATE": "Create",
+        "EDIT": "Edit",
+        "SUBMIT": "Submit",
+        "CONFIRM": "Confirm",
+        "DISCARD": "Discard",
+        "DOWNLOAD": "Download",
+        "CANCEL": "Cancel",
+        "REVOKE": "Revoke",
+        "REJECT": "Reject",
+        "ADD": "Add",
+        "BACK": "Back",
+        "UPDATE": "Update",
+        "NEXT": "Next",
+        "APPLY": "Apply",
+        "ATTACH": "Attach file"
+    },
+    "Computed": {
+        "percent": "{{value}}%",
+        "date": "{{date, fromIso}}",
+        "period": "{{period}} mo.",
+        "day": "{{day}} day",
+        "amount": "{{amount.currencyCode}} {{amount.value}}",
+        "orderNumber": "№ {{value}}"
+    },
+    "Period": {
+        "day": "day."
+    },
+    "Option": {
+        "yes": "Yes",
+        "no": "No"
+    },
+    "Loading": {
+        "title": "Loading...",
+        "files": "Loading..."
+    },
+    "Retry": {
+        "title": "Try again"
+    },
+    "Navigation": {
+    },
+    "Person": {
+        "fullName": {
+            "label": "Full Name",
+            "placeholder": "Enter full name"
+        },
+        "firstName": {
+            "label": "First name",
+            "placeholder": "Enter first name"
+        },
+        "lastName": {
+            "label": "Last name",
+            "placeholder": "Enter last name"
+        },
+        "patronymic": {
+            "label": "Patronymic",
+            "placeholder": "Enter patronymic"
+        },
+        "gender": {
+            "label": "Gender"
+        },
+        "birthDate": {
+            "label": "Birth date"
+        },
+        "birthCountry": {
+            "label": "Birth country",
+            "placeholder": "Select birth country"
+        },
+        "birthCity": {
+            "label": "Birth city",
+            "placeholder": "Select birth city"
+        },
+        "citizenship": {
+            "label": "Citizenship",
+            "placeholder": "Select citizenship"
+        },
+        "maritalStatus": {
+            "label": "Marital status",
+            "placeholder": "Select marital status"
+        },
+        "signature": {
+            "label": "Signature"
+        },
+        "resident": {
+            "label": "Resident",
+            "value-plural": "No",
+            "value": "Yes"
+        }
+    },
+    "Address": {
+        "country": {
+            "label": "Country",
+            "placeholder": "Select country"
+        },
+        "region": {
+            "label": "Region",
+            "placeholder": "Select region"
+        },
+        "city": {
+            "label": "City",
+            "placeholder": "Select city"
+        },
+        "street": {
+            "label": "Street",
+            "placeholder": "Enter street"
+        },
+        "house": {
+            "label": "House",
+            "placeholder": "Enter house"
+        },
+        "block": {
+            "label": "Block",
+            "placeholder": "Enter block"
+        },
+        "building": {
+            "label": "Building",
+            "placeholder": "Enter building"
+        },
+        "postCode": {
+            "label": "Post code",
+            "placeholder": "Enter post code"
+        }
+    },
+    "Gender": {
+        "MALE": "Male",
+        "FEMALE": "Female"
+    },
+    "MaritalStatus": {
+        "SINGLE": "Single",
+        "MARRIED": "Married"
+    },
+    "Contact": {
+        "home": {
+            "label": "Home phone",
+            "placeholder": "Enter home phone"
+        },
+        "mobile": {
+            "label": "Mobile phone",
+            "placeholder": "Enter mobile phone"
+        },
+        "other": {
+            "label": "Other phone"
+        },
+        "email": {
+            "label": "E-mail",
+            "placeholder": "Enter e-mail"
+        }
+    },
+    "Document": {
+        "type": {
+            "label": "Document type",
+            "placeholder": "Select document type"
+        },
+        "prefix": {
+            "label": "Series",
+            "placeholder": "1234"
+        },
+        "serialNumber": {
+            "label": "Document number",
+            "prefixLabel": "Series and document number",
+            "placeholder": "012345678"
+        },
+        "expirationDate": {
+            "label": "Expiration date"
+        },
+        "issuingOrganization": {
+            "label": "Issuing organization",
+            "placeholder": "Enter issuing organization"
+        },
+        "issuingDate": {
+            "label": "Issuing date"
+        },
+        "issuingCountry": {
+            "label": "Issuing country",
+            "placeholder": "Enter issuing country"
+        }
+    },
+    "Validation": {
+        "min": "Must be more than {{count}} symbols",
+        "max": "Must be less than {{count}} symbols",
+        "minNumber": "Must be more than {{number}}",
+        "maxNumber": "Must be less than {{number}}",
+        "length": "Must be {{count}} symbols",
+        "sumMax": "The total length of fields {{fields}} must be less than {{count}} symbols",
+        "inList": "Choose value from list",
+        "date": "Wrong date",
+        "required": "Field is required",
+        "prefix": "Must be from 2 to 3 latin uppercase symbols",
+        "serialNumber": "Must be from 6 to 9 digits",
+        "phone": "Must be valid Azerbaijani phone",
+        "select": "Choose value from the list"
+    },
+    "Error": {
+        "unknown": "Unknown Error",
+        "retry": "Error occurred. Please, retry.",
+        "noData": "No data",
+        "mandatory": {
+            "fill": "Field is mandatory",
+            "check": "Field must be checked"
+        },
+        "form": {
+            "title": "Please, fix incorrect fields"
+        },
+        "noSearchResults": "Nothing found for \"{{value}}\""
+    },
+    "Role": {
+        "ROLE_USER": "User",
+        "ROLE_ADMIN": "Admin"
+    }
+}

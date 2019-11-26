@@ -1,0 +1,20 @@
+{
+    "LoginPage": {
+        "Login": {
+            "button": "Login",
+            "label": "Authorization",
+            "username": {
+                "label": "Login",
+                "placeholder": "Enter Login"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter Password"
+            }
+        },
+        "Loading": {
+            "title": "Please, wait",
+            "subTitle": "Authorizing…"
+        }
+    }
+}

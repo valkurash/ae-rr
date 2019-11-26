@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <style type="text/css">
+            .loading {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 140px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .loading .message {
+                font-family: Arial, sans-serif;
+                font-weight: 600;
+            }
+
+            .spinner {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                animation-name: rotate;
+                animation-duration: .5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+            .spinner-svg {
+                fill: transparent;
+                stroke: #780f2d;
+                stroke-dasharray: 240;
+                stroke-dashoffset: 40;
+                stroke-linecap: butt;
+                stroke-width: 7;
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="spinner">
+                <svg class="spinner-svg" viewBox="-75 -75 150 150"><circle cx="0" cy="0" r="37.5"></circle></svg>
+            </div>
+            <div class="message">Loading...</div>
+        </div>
+    </body>
+</html>

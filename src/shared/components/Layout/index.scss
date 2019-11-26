@@ -1,0 +1,102 @@
+$base: 4px;
+
+.btn-aside-nav {
+    display: inline-block;
+    padding: $base * 2;
+    margin: 0;
+    overflow: hidden;
+    color: #ccc;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 2px;
+    transition: .2s;
+
+    & + & {
+        margin-top: $base;
+    }
+
+    &:hover,
+    &.active {
+        color: #fff;
+        background-color: #ccc;
+    }
+}
+
+.layout {
+    $asideWidth: $base * 15;
+
+    height: 100%;
+
+    &--inactive {
+        pointer-events: none;
+        filter: blur(5px);
+    }
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    &-logout {
+        cursor: pointer;
+    }
+
+    &__aside,
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__aside {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        align-items: center;
+        width: $asideWidth;
+        background-color: #aaa;
+    }
+
+    &__content {
+        min-height: 100%;
+        margin-left: $asideWidth;
+
+        &-body,
+        &-body-row {
+        }
+
+        &-body {
+            &--main {
+            }
+
+            &--secondary {
+            }
+        }
+    }
+
+    &-header {
+        background-color: #ddd;
+        border-bottom: 2px * 2 solid #ccc;
+
+        &__content {
+            flex-grow: 1;
+        }
+
+        &__system-info {
+            min-width: 180px;
+
+            &-item {
+                & + & {
+                    padding-left: $base * 3;
+                    margin-left: $base * 8;
+                    border-left: 2px * 2 solid #ccc;
+                }
+            }
+        }
+    }
+}
