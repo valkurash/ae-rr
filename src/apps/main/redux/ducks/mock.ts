@@ -11,9 +11,9 @@ import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 import { IAsyncData, IError, IItem } from 'models';
 import { asyncReducerGen, getInitialAsyncData } from 'utils/redux';
 import { RestClient } from 'utils/rest';
+
 import { API } from '../../api';
 import { IMainReduxState } from '../models';
-
 import { getDuckActionNamespace } from '../utils';
 
 const reducerName = 'mock';

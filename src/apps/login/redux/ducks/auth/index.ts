@@ -1,20 +1,19 @@
 /**
  * @file Auth ducks.
  */
-
-import { DEFAULT_PATH, TOKEN_NAME, TOKEN_REFRESH_NAME } from 'consts';
-import { IAsyncData, IError, IItem } from 'models';
 import { combineReducers } from 'redux';
 import { SagaIterator } from 'redux-saga';
 import { apply, call, takeEvery } from 'redux-saga/effects';
 import actionCreatorFactory from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
+
+import { DEFAULT_PATH, TOKEN_NAME, TOKEN_REFRESH_NAME } from 'consts';
+import { IAsyncData, IError, IItem } from 'models';
 import { asyncReducerGen, getInitialAsyncData, safeCall } from 'utils/redux';
 import { redirect, RestClient } from 'utils/rest';
 
 import { ILoginReduxState } from '../../models';
 import { getDuckActionNamespace } from '../../utils';
-
 import { API } from './api';
 
 const reducerName = 'auth';

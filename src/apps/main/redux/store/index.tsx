@@ -7,7 +7,6 @@ import { composeEnhancers } from 'utils/redux';
 import UserInfoReducer, { initialState as userInfoInitialState } from 'shared/redux/ducks/userInfo';
 
 import { IMainReduxState } from '../models';
-
 import MockReducer, { initialState as mockInitialState } from '../ducks/mock';
 import { rootSaga } from '../saga';
 
