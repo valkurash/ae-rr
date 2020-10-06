@@ -18,6 +18,7 @@ const reducerName = 'userInfo';
 
 //#region Models
 
+// TODO: change model when auth on back will be ready
 /** User info base model. */
 interface IUserInfoBase {
     /** Email. */
@@ -49,11 +50,11 @@ export interface IUserInfo extends IUserInfoBase {
 }
 
 /** User info Redux state. */
-export interface IUserInfoBranch extends IAsyncData<IUserInfo> {}
+export interface IUserInfoState extends IAsyncData<IUserInfo> {}
 
 /** Redux state with user info. */
 export interface IUserInfoReduxState {
-    userInfo: IUserInfoBranch;
+    userInfo: IUserInfoState;
 }
 
 /** Response format for user info REST method. */
@@ -77,7 +78,7 @@ export const userInfoActionCreators = {
 //#region Reducers
 
 /** User info reducer initial state. */
-export const initialState: IUserInfoBranch = getInitialAsyncData<IUserInfo>();
+export const initialState: IUserInfoState = getInitialAsyncData<IUserInfo>();
 
 /** User info reducers. */
 export const userInfoReducer = asyncReducerGen<void, IUserInfo>(userInfoActionCreators.fulfill);
@@ -96,10 +97,11 @@ const userInfoWorkers = {
         const userInfoPayload: IUserInfoPayload = yield apply(jwt, jwt.decode, [token]);
         const userInfo: IUserInfo = {};
 
+        // TODO: change model when auth on back will be ready
         if (userInfoPayload) {
-            userInfo.email = userInfoPayload.email;
-            userInfo.phone = userInfoPayload.phone;
-            userInfo.fullName = userInfoPayload.full_name;
+            //userInfo.email = userInfoPayload.email;
+            //userInfo.phone = userInfoPayload.phone;
+            //userInfo.fullName = userInfoPayload.full_name;
             userInfo.login = userInfoPayload.sub;
             userInfo.role = userInfoPayload.role;
         }
@@ -115,9 +117,9 @@ export const userInfoWatchers = [takeLeading(userInfoActionCreators.fulfill.star
 //#region Selectors
 
 /** User info selectors. */
-export const userInfoSelectors = {
+export const UserInfoSelectors = {
     /** Returns user info branch from redux state.  */
-    getBranch(state: IUserInfoReduxState): IUserInfoBranch {
+    getBranch(state: IUserInfoReduxState): IUserInfoState {
         return state.userInfo;
     },
 };

@@ -4,12 +4,12 @@
 
 import { combineReducers } from 'redux';
 import { SagaIterator } from 'redux-saga';
-import { call, takeEvery } from 'redux-saga/effects';
+import { call, takeLeading } from 'redux-saga/effects';
 import actionCreatorFactory from 'typescript-fsa';
 import { bindAsyncAction } from 'typescript-fsa-redux-saga';
 
 import { IAsyncData, IError, IItem } from 'models';
-import { asyncReducerGen, getInitialAsyncData } from 'utils/redux';
+import { asyncReducerGen, getInitialAsyncData, safeCall } from 'utils/redux';
 import { RestClient } from 'utils/rest';
 
 import { API } from '../../api';
@@ -24,6 +24,9 @@ const reducerName = 'mock';
 export interface IInfo {
     /** Data. */
     name: string;
+
+    /** Chat list. */
+    chats: string[];
 }
 
 /** New customer Redux state. */
@@ -45,7 +48,7 @@ const actionCreator = actionCreatorFactory(getDuckActionNamespace(reducerName));
 /** Mock action creators. */
 export const MockActionCreators = {
     /** Fetch info. */
-    getInfo: actionCreator.async<void, IInfoRs, IError>('GET_INFO'),
+    getInfo: actionCreator.async<string, IInfoRs, IError>('GET_INFO'),
 };
 
 //#endregion.
@@ -59,7 +62,7 @@ export const initialState: IMockReduxState = {
 
 /** New customer reducer. */
 export default combineReducers<IMockReduxState>({
-    info: asyncReducerGen<void, IInfo>(MockActionCreators.getInfo),
+    info: asyncReducerGen<string, IInfo>(MockActionCreators.getInfo),
 });
 
 //#endregion.
@@ -71,8 +74,8 @@ const restClient = new RestClient();
 /** Mock services. */
 export const MockServices = {
     /** Get info method. */
-    getInfo(): Promise<IInfoRs> {
-        return restClient.get<IInfoRs>(API.endpoints.mock.info);
+    getInfo(id: string): Promise<IInfoRs> {
+        return restClient.get<IInfoRs>(API.endpoints.mock.info(id));
     },
 };
 
@@ -81,12 +84,12 @@ export const MockServices = {
 //#region Sagas
 
 /** Get mock info saga worker. */
-const getMockInfoWorker = bindAsyncAction(MockActionCreators.getInfo, { skipStartedAction: true })(function*(): SagaIterator {
-    return yield call(MockServices.getInfo);
+const getMockInfoWorker = bindAsyncAction(MockActionCreators.getInfo, { skipStartedAction: true })(function*(params: string): SagaIterator {
+    return yield call(MockServices.getInfo, params);
 });
 
 /** New Customer saga. */
-export const mockWatchers = [takeEvery(MockActionCreators.getInfo.started.type, getMockInfoWorker)];
+export const mockWatchers = [takeLeading(MockActionCreators.getInfo.started.type, safeCall(getMockInfoWorker))];
 
 //#endregion
 

@@ -9,8 +9,8 @@ export const endpoints = {
     /** Mock. */
     mock: {
         base: '/mock',
-        get info(): string {
-            return `${this.base}/info`;
+        info(id: string): string {
+            return `${this.base}/info/${id}`;
         },
     },
 };

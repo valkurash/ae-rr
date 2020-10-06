@@ -11,6 +11,9 @@ export const ROUTES = {
     PORTAL: {
         PATH: '/portal',
         INNER: { PATH: '/portal/inner' },
+        CHAT: {
+            PATH: '/portal/chat/:id',
+        },
     },
     LOG_OUT: SHARED_ROUTES.LOG_OUT,
 };

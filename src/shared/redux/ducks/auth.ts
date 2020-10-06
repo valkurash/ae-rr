@@ -48,7 +48,8 @@ export const authService = {
 
 /** Logout worker. */
 const logoutWorker = bindAsyncAction(authActionCreators.logout, { skipStartedAction: true })(function*(): SagaIterator {
-    yield call(authService.logout);
+    // TODO: change when auth will be ready
+    // yield call(authService.logout);
     yield apply(localStorage, localStorage.removeItem, [TOKEN_NAME]);
     yield apply(localStorage, localStorage.removeItem, [TOKEN_REFRESH_NAME]);
     yield call(redirect, DEFAULT_PATH);

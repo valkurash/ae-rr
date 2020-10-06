@@ -6,6 +6,8 @@ import { LogoutRoutes } from 'shared/routes/logout';
 import { PrivateRoute } from 'components/PrivateRoute';
 import { Layout } from 'shared/components/Layout';
 import { LayoutBody } from 'shared/components/Layout/LayoutBody';
+import { ChatPage } from '../components/ChatPage/Page';
+import { WithGeneralInfo } from '../components/WithGeneralInfo';
 
 import { ROUTES } from './consts';
 
@@ -21,16 +23,19 @@ export const Routes: JSX.Element = (
         /** Main routes. */
         <PrivateRoute
             render={() => (
-                <Layout>
-                    <LayoutBody>
-                        <Suspense fallback={<Loading />}>
-                            <Switch>
-                                <Route render={() => <div>INNER</div>} path={ROUTES.PORTAL.INNER.PATH} />
-                                <Route component={MainPage} path={ROUTES.PORTAL.PATH} />
-                            </Switch>
-                        </Suspense>
-                    </LayoutBody>
-                </Layout>
+                <WithGeneralInfo>
+                    <Layout>
+                        <LayoutBody>
+                            <Suspense fallback={<Loading />}>
+                                <Switch>
+                                    <Route render={() => <div>INNER</div>} path={ROUTES.PORTAL.INNER.PATH} />
+                                    <Route component={ChatPage} path={ROUTES.PORTAL.CHAT.PATH} />
+                                    <Route component={MainPage} path={ROUTES.PORTAL.PATH} />
+                                </Switch>
+                            </Suspense>
+                        </LayoutBody>
+                    </Layout>
+                </WithGeneralInfo>
             )}
             path={ROUTES.PORTAL.PATH}
         />
